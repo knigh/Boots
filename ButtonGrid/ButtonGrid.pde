@@ -31,7 +31,6 @@ color drawColor = color(0,0,255);
 void setup()
 {
   float sideLength = float(screen.height) / float(rows);
-  
   int columns = floor(screen.width / sideLength);
   
   size(screen.width, screen.height);
@@ -39,12 +38,13 @@ void setup()
   
   buttons = new ArrayList(rows*columns);
   
-  for ( int x=0; x<columns; x++)
-    for ( int y=0; y<rows; y++) {
+  for (int x=0; x<columns; x++) {
+    for (int y=0; y<rows; y++) {
       // Define and create rectangle button
       RectButton r = new RectButton(x*sideLength, y*sideLength, sideLength);
       buttons.add(r);
     }
+  }
 }
 
 void draw()
